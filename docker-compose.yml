@@ -5,14 +5,15 @@ services:
     image: scyto/unifibrowser
     ports:
       - 8000:8000
+      # - 8443:8443
     environment:
       - USER=apibrowser
-      - "PASSWORD=${UNIFI_PASS}"
-      - UNIFIURL=https://unifi.phillycommunitywireless.org
+      - "PASSWORD=${TEST_UNIFI_PASS}"
+      - "UNIFIURL=${TEST_UNIFI_BASE_URL}"
       - DISPLAYNAME=Philly Community Wireless
       - PORT=8443
-      - APIBROWSERUSER=pcw
-      - APIBROWSERPASS=5c0f20f857a8e783e6520c25f077bf43b46bab23e14a64eec81da5c1a4aeaed0d82f3ebd4b91daaff1f3c183d0cbebf881e811165036c3189b8c988502e64a61
+      - API_BROWSER_USER=pcw_test
+      - API_BROWSER_PASS_HASH='0512b3ea6c10351c19fcab56f810e24e3bdb267328d39b40376f1dc491fbbd564fa0a611050ab4283470124f1ff4dfbf78f3d5e6df37fb783f7da30a846374c2'
 
       # vv== This MUST be 0 ==vv
       - NOAPIBROWSERAUTH=0
