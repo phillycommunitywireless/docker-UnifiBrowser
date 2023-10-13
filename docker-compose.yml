@@ -12,7 +12,7 @@ services:
       - DISPLAYNAME=Philly Community Wireless
       - PORT=8443
       - "APIBROWSERUSER=${APIBROWSER_USER}"
-      - "APIBROWSERPASS={APIBROWSER_PASS}"
+      - "APIBROWSERPASS=${APIBROWSER_PASS}"
 
       # vv== This MUST be 0 ==vv
       - NOAPIBROWSERAUTH=0
